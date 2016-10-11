@@ -1,23 +1,13 @@
-#Android generated
-bin
-gen
-
-#Eclipse
-.project
-.classpath
-.settings
-
-#IntelliJ IDEA
-.idea
-*.iml
-classes
-
-#Maven
-target
-release.properties
-pom.xml.*
-
-#Command line
+.gradle
+.DS_Store
+/captures
+.idea/*.xml
+.idea/dictionaries/
+.idea/libraries/
+/*/local.properties
 local.properties
-build.xml
-proguard-project.txt
+/*/out
+*/build
+build/
+*.iml
+.name
