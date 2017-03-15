@@ -239,7 +239,7 @@ public class CirclePageIndicator extends View implements PageIndicator {
         float longOffset = longPaddingBefore + mRadius;
         if (mCentered) {
             final float circleSize = mRadius * 2;
-            final float width = count * circleSize + ((count) * mSpacing);
+            final float width = count * circleSize + ((count-1) * mSpacing) + ((count - 1) * mRadius);
             longOffset += ((longSize - longPaddingBefore - longPaddingAfter) / 2.0f) - (width / 2.0f);
         }
 
@@ -478,7 +478,7 @@ public class CirclePageIndicator extends View implements PageIndicator {
             //Calculate the width according the views count
             final int count = mViewPager.getAdapter().getCount();
             result = (int)(getPaddingLeft() + getPaddingRight()
-                    + (count * 2 * mRadius) + (count - 1) * (mRadius + mSpacing) + 1);
+                    + (count * 2 * mRadius) + ((count - 1) * (mRadius + mSpacing)) + 1);
             //Respect AT_MOST value if that was what is called for by measureSpec
             if (specMode == MeasureSpec.AT_MOST) {
                 result = Math.min(result, specSize);
