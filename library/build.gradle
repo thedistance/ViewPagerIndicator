@@ -10,9 +10,22 @@ android {
     }
 
     buildTypes {
+        beta {
+            initWith debug
+        }
+
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+
+    flavorDimensions "default"
+
+    productFlavors {
+
+        defaultFlavor {
+            dimension "default"
         }
     }
 }
